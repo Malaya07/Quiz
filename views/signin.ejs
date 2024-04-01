@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+		integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="style/signin.css">
+<body>
+    <div class="container">
+        <div class="form signin">
+            <h2>Sign In</h2>
+            <form action="signin" method="post">
+                <div class="inputBox">
+                    <input type="text" required="required" name="email"/>
+                    <i class="fa-regular fa-user"></i>
+                    <span>email address</span>
+                </div>
+                <div class="inputBox">
+                    <input type="password" required="required" name="password" />
+                    <i class="fa-solid fa-lock"></i>
+                    <span>password</span>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" value="Login" />
+                </div>
+                <p>
+                    Not Registered ? <a href="signup" class="create">Create an account</a>
+                </p>
+            </form>
+        </div>
+    </body>
+    </div>
+</html>
