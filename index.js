@@ -11,7 +11,7 @@ const userscore = require("./models/userscore");
 const User=require("./models/dburl")
 
 const app = express();
-const PORT = 8000; 
+const PORT = process.env.PORT || 8000; 
 const SECRET_KEY = "PRACTICE";
 
 // Middleware to parse JSON bodies
