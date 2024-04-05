@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
     
     // Note: Ensure to use a secure hashing algorithm instead of plain text
     // Here we're using a simple hash function for demonstration purposes
-    const hashedPassword = hash(password);
+    const hashedPassword = password
     
     const data = await User.create({
       name: name,
@@ -37,9 +37,3 @@ router.post('/', async (req, res) => {
 
 module.exports = router;
 
-// Simple hash function for demonstration, replace with secure hashing algorithm
-function hash(password) {
-  // Replace this implementation with a secure hashing algorithm
-  // Example: return bcrypt.hash(password, saltRounds);
-  return password + "hashed"; // This is not secure, just for demonstration
-}
