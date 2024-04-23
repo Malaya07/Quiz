@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-connectToMongoDB("mongodb://localhost:27017/quizz")
+connectToMongoDB("mongodb+srv://beastkiller571:<beasthunter>@cluster0.ws5pr9w.mongodb.net/")
   .then(() => console.log("Mongodb connected"))
   .catch((err) => console.error(err));
 
