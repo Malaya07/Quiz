@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-connectToMongoDB("mongodb://https://quiz-1-mxv1.onrender.com:27017/quizz")
+connectToMongoDB("mongodb://localhost:27017/quizz")
   .then(() => console.log("Mongodb connected"))
   .catch((err) => console.error(err));
 
