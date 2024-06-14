@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-connectToMongoDB("mongodb+srv://beastkiller571:<beasthunter>@cluster0.ws5pr9w.mongodb.net/")
+connectToMongoDB("mongodb://localhost:27017/newquiz")
   .then(() => console.log("Mongodb connected"))
   .catch((err) => console.error(err));
 
@@ -117,6 +117,15 @@ async function getLeaderboard() {
       throw error;
   }
 }
+app.get('/feedback', (req, res) => {
+  res.render('feedback');
+});
 
+app.post('/submit-feedback', (req, res) => {
+  // Process the feedback form submission here (save to database, etc.)
+  
+  // Redirect to 'home'
+  res.redirect('/'); // Replace '/home' with your actual home route
+});
 
 app.listen(PORT, () => console.log("Server started at 8000"));

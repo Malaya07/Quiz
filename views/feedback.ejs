@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App Feedback Form</title>
+</head>
+<link rel="stylesheet" href="style/feedback.css">
+<body>
+    <div class="container">
+        <div class="form">
+            <h1>Full-Stack Online Quiz App Feedback Form</h1>
+            <form action="/submit-feedback" method="post">
+                <!-- User Information -->
+                <fieldset>
+                    <legend>User Information</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br><br>
+        
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+        
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" min="1" required><br><br>
+        
+                    <label>Gender:</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="nonbinary" name="gender" value="nonbinary">
+                    <label for="nonbinary">Non-binary</label>
+                    <input type="radio" id="preferNotToSay" name="gender" value="preferNotToSay">
+                    <label for="preferNotToSay">Prefer not to say</label>
+                    <br><br>
+                </fieldset>
+        
+                <!-- Usage -->
+                <fieldset>
+                    <legend>Usage</legend>
+                    <label>How often do you use the quiz app?</label><br>
+                    <input type="radio" id="daily" name="usage" value="daily">
+                    <label for="daily">Daily</label>
+                    <input type="radio" id="weekly" name="usage" value="weekly">
+                    <label for="weekly">Weekly</label>
+                    <input type="radio" id="monthly" name="usage" value="monthly">
+                    <label for="monthly">Monthly</label>
+                    <input type="radio" id="rarely" name="usage" value="rarely">
+                    <label for="rarely">Rarely</label>
+                    <br><br>
+                </fieldset>
+        
+                <!-- Usability -->
+                <fieldset>
+                    <legend>Usability</legend>
+                    <label>How would you rate the ease of use of the app?</label><br>
+                    <input type="radio" id="veryEasy" name="easeOfUse" value="veryEasy">
+                    <label for="veryEasy">Very easy</label>
+                    <input type="radio" id="easy" name="easeOfUse" value="easy">
+                    <label for="easy">Easy</label>
+                    <input type="radio" id="neutral" name="easeOfUse" value="neutral">
+                    <label for="neutral">Neutral</label>
+                    <input type="radio" id="difficult" name="easeOfUse" value="difficult">
+                    <label for="difficult">Difficult</label>
+                    <input type="radio" id="veryDifficult" name="easeOfUse" value="veryDifficult">
+                    <label for="veryDifficult">Very difficult</label>
+                    <br><br>
+        
+                    <label>Was it easy to navigate through the app?</label><br>
+                    <input type="radio" id="easyNavigateYes" name="navigateEase" value="yes">
+                    <label for="easyNavigateYes">Yes</label>
+                    <input type="radio" id="easyNavigateNo" name="navigateEase" value="no">
+                    <label for="easyNavigateNo">No</label>
+                    <input type="radio" id="easyNavigateSomewhat" name="navigateEase" value="somewhat">
+                    <label for="easyNavigateSomewhat">Somewhat</label>
+                    <br><br>
+                </fieldset>
+        
+                <!-- Design and Appearance -->
+                <fieldset>
+                    <legend>Design and Appearance</legend>
+                    <label>How do you find the overall design and appearance of the app?</label><br>
+                    <input type="radio" id="designExcellent" name="design" value="excellent">
+                    <label for="designExcellent">Excellent</label>
+                    <input type="radio" id="designGood" name="design" value="good">
+                    <label for="designGood">Good</label>
+                    <input type="radio" id="designAverage" name="design" value="average">
+                    <label for="designAverage">Average</label>
+                    <input type="radio" id="designPoor" name="design" value="poor">
+                    <label for="designPoor">Poor</label>
+                    <br><br>
+        
+                    <label>Is the app visually appealing?</label><br>
+                    <input type="radio" id="visuallyAppealingYes" name="visualAppeal" value="yes">
+                    <label for="visuallyAppealingYes">Yes</label>
+                    <input type="radio" id="visuallyAppealingNo" name="visualAppeal" value="no">
+                    <label for="visuallyAppealingNo">No</label>
+                    <input type="radio" id="visuallyAppealingSomewhat" name="visualAppeal" value="somewhat">
+                    <label for="visuallyAppealingSomewhat">Somewhat</label>
+                    <br><br>
+                </fieldset>
+        
+                <!-- Functionality -->
+                <fieldset>
+                    <legend>Functionality</legend>
+                    <label>How satisfied are you with the performance of the app?</label><br>
+                    <input type="radio" id="performanceVerySatisfied" name="performance" value="verySatisfied">
+                    <label for="performanceVerySatisfied">Very satisfied</label>
+                    <input type="radio" id="performanceSatisfied" name="performance" value="satisfied">
+                    <label for="performanceSatisfied">Satisfied</label>
+                    <input type="radio" id="performanceNeutral" name="performance" value="neutral">
+                    <label for="performanceNeutral">Neutral</label>
+                    <input type="radio" id="performanceUnsatisfied" name="performance" value="unsatisfied">
+                    <label for="performanceUnsatisfied">Unsatisfied</label>
+                    <input type="radio" id="performanceVeryUnsatisfied" name="performance" value="veryUnsatisfied">
+                    <label for="performanceVeryUnsatisfied">Very unsatisfied</label>
+                    <br><br>
+        
+                    <label>Did you encounter any bugs or issues while using the app? (Please specify)</label><br>
+                    <input type="radio" id="bugsYes" name="bugs" value="yes">
+                    <label for="bugsYes">Yes</label><br>
+                    <textarea id="bugsDescription" name="bugsDescription" rows="4" cols="50"></textarea><br>
+                    <input type="radio" id="bugsNo" name="bugs" value="no">
+                    <label for="bugsNo">No</label>
+                    <br><br>
+                </fieldset>
+        
+                <!-- Features -->
+                <fieldset>
+                    <legend>Features</legend>
+                    <label>Which features do you find most useful? (Select all that apply)</label><br>
+                    <input type="checkbox" id="featureVariety" name="features" value="variety">
+                    <label for="featureVariety">Variety of quizzes</label><br>
+                    <input type="checkbox" id="featureTimed" name="features" value="timed">
+                    <label for="featureTimed">Timed quizzes</label><br>
+                    <input type="checkbox" id="featureLeaderboards" name="features" value="leaderboards">
+                    <label for="featureLeaderboards">Leaderboards</label><br>
+                    <input type="checkbox" id="featureProgress" name="features" value="progress">
+                    <label for="featureProgress">Progress tracking</label><br>
+                    <input type="checkbox" id="featureSocial" name="features" value="social">
+                    <label for="featureSocial">Social sharing</label><br>
+                    <input type="checkbox" id="featureOther" name="features" value="other">
+                    <label for="featureOther">Others (Please specify):</label><br>
+                    <textarea id="otherFeatures" name="otherFeatures" rows="2" cols="50"></textarea>
+                    <br><br>
+        
+                    <label>Are there any features you would like to see added?</label><br>
+                    <input type="radio" id="featuresYes" name="additionalFeatures" value="yes">
+                    <label for="featuresYes">Yes</label><br>
+                    <textarea id="additionalFeaturesDescription" name="additionalFeaturesDescription" rows="4" cols="50"></textarea><br>
+                    <input type="radio" id="featuresNo" name="additionalFeatures" value="no">
+                    <label for="featuresNo">No</label>
+                    <br><br>
+                </fieldset>
+        
+                <!-- Overall Experience -->
+                <fieldset>
+                    <legend>Overall Experience</legend>
+                    <label>How would you rate your overall experience with the app?</label><br>
+                    <input type="radio" id="experienceExcellent" name="experience" value="excellent">
+                    <label for="experienceExcellent">Excellent</label>
+                    <input type="radio" id="experienceGood" name="experience" value="good">
+                    <label for="experienceGood">Good</label>
+                    <input type="radio" id="experienceAverage" name="experience" value="average">
+                    <label for="experienceAverage">Average</label>
+                    <input type="radio" id="experiencePoor" name="experience" value="poor">
+                    <label for="experiencePoor">Poor</label>
+                    <br><br>
+        
+                    <label>Would you recommend this app to others?</label><br>
+                    <input type="radio" id="recommendYes" name="recommend" value="yes">
+                    <label for="recommendYes">Yes</label>
+                    <input type="radio" id="recommendNo" name="recommend" value="no">
+                    <label for="recommendNo">No</label>
+                    <br><br>
+                </fieldset>
+        
+                <!-- Additional Comments -->
+                <fieldset>
+                    <legend>Additional Comments</legend>
+                    <label for="additionalComments">Please provide any additional comments or suggestions you may have:</label><br>
+                    <textarea id="additionalComments" name="additionalComments" rows="4" cols="50"></textarea><br><br>
+                </fieldset>
+        
+                <!-- Contact Permission -->
+                <fieldset>
+                    <legend>Contact Permission</legend>
+                    <label>May we contact you for further feedback if needed?</label><br>
+                    <input type="radio" id="contactYes" name="contactPermission" value="yes">
+                    <label for="contactYes">Yes</label>
+                    <input type="radio" id="contactNo" name="contactPermission" value="no">
+                    <label for="contactNo">No</label>
+                    <br><br>
+                </fieldset>
+        
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+   
+</body>
+</html>

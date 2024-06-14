@@ -7,16 +7,17 @@ const QuizScore = require('../models/userscore'); // Assuming you have a QuizSco
 const auth = async (req, res, next) => {
     // Check if the authentication cookie exists
     const token = req.cookies.logintoken;
-
+   console.log(token)
     if (token) {
         // Token exists, verify its validity
         jwt.verify(token, SECRET_KEY, async (err, decoded) => {
             if (err) {
-                // Token is invalid
+                console.log("invalid token")
                 res.status(401).send("Unauthorized: Invalid token");
             } else {
                 // Token is valid, check if the user has attempted the quiz today
-                const userId = decoded.userid; // Assuming the token contains user ID
+                const userId = decoded.id; 
+                console.log(userId);
                 const today = new Date();
                 today.setHours(0, 0, 0, 0); // Set time to the beginning of the day
 
