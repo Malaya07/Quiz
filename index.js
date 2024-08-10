@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-connectToMongoDB("mongodb://localhost:27017/newquiz")
+connectToMongoDB("mongodb://mk-server:27017/quiz_app")
   .then(() => console.log("Mongodb connected"))
   .catch((err) => console.error(err));
 
@@ -128,4 +128,4 @@ app.post('/submit-feedback', (req, res) => {
   res.redirect('/'); // Replace '/home' with your actual home route
 });
 
-app.listen(PORT, () => console.log("Server started at 8000"));
+app.listen(PORT, () => console.log(`Server started at ${PORT}`));
